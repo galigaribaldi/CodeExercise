@@ -1,0 +1,846 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: PokemonApi
+  description: "# Pokemon API Collection\n\nColección diseñada para hacer más fácil las pruebas para la *API de Pokemon.* La cual está dividida en 2 carpetas principales:\n\n*   Local: Puedes probar ésta carpeta si corres el proyecto en tu **archivo local (http://127.0.0.1:8000/)**\n    \n\n*   Final Heroku: Puedes probar ésta carpeta desde cualquier cliente, ya que se encuentra s**ubida a un servidor (https://code-excersice.herokuapp.com)**\n    \n\nAmbas carpetas contienen una estructura de carpetas similar:\n\n*   Pokemon: Aquí encontrarás la información de los *pokemons registrados*\n*   Pokemon Trainning: Aquí encontrarás la información de los *entrenadores pokemon's*\n*   Pokemon Team: Equipos pokemon *liderados por su entrenador*\n*   Pokemon Team Only: Equipos pokemon donde sólo hay *pokemons en grupo*"
+  contact: {}
+host: 127.0.0.1:8000:8000
+basePath: /v1
+securityDefinitions: {}
+schemes:
+- http
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /Pokemon:
+    get:
+      summary: Get All Pokemon
+      tags:
+      - Pokemon
+      operationId: GetAllPokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      summary: Post Pokemon
+      tags:
+      - Pokemon
+      operationId: PostPokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/PostPokemonRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /Pokemon/1:
+    get:
+      summary: Get Pokemon by ID
+      tags:
+      - Pokemon
+      operationId: GetPokemonbyID
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    put:
+      summary: Modfy Pokemon
+      tags:
+      - Pokemon
+      operationId: ModfyPokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ModfyPokemonRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /Pokemon/4:
+    delete:
+      summary: Delete Pokemon
+      tags:
+      - Pokemon
+      operationId: DeletePokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /Pokemon/7:
+    delete:
+      summary: Delete Pokemon1
+      tags:
+      - Pokemon
+      operationId: DeletePokemon1
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /Pokemon/6:
+    put:
+      summary: Modfy Pokemon1
+      tags:
+      - Pokemon
+      operationId: ModfyPokemon1
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ModfyPokemonRequest1'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTraining:
+    get:
+      summary: Get All Trainning
+      tags:
+      - Pokemon Trainning
+      operationId: GetAllTrainning
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      summary: Post Trainning
+      tags:
+      - Pokemon Trainning
+      operationId: PostTrainning
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/PostTrainningRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTraining/1:
+    get:
+      summary: Get Trainning by ID
+      tags:
+      - Pokemon Trainning
+      operationId: GetTrainningbyID
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTraining/3:
+    put:
+      summary: Modify Pokemon Trainning
+      tags:
+      - Pokemon Trainning
+      operationId: ModifyPokemonTrainning
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ModifyPokemonTrainningRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTraining/2:
+    delete:
+      summary: Delete Trainning
+      tags:
+      - Pokemon Trainning
+      operationId: DeleteTrainning
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTraining/5:
+    delete:
+      summary: Delete Trainning1
+      tags:
+      - Pokemon Trainning
+      operationId: DeleteTrainning1
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeam:
+    get:
+      summary: Get All Teams
+      tags:
+      - Pokemon Team
+      operationId: GetAllTeams
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      summary: Post Team
+      tags:
+      - Pokemon Team
+      operationId: PostTeam
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/PostTeamRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeam/1:
+    get:
+      summary: Get Team by Id
+      tags:
+      - Pokemon Team
+      operationId: GetTeambyId
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeam/5:
+    put:
+      summary: Modify Pokemon Team
+      tags:
+      - Pokemon Team
+      operationId: ModifyPokemonTeam
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ModifyPokemonTeamRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeam/2:
+    delete:
+      summary: Delete Team
+      tags:
+      - Pokemon Team
+      operationId: DeleteTeam
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeam/3:
+    delete:
+      summary: Delete Team1
+      tags:
+      - Pokemon Team
+      operationId: DeleteTeam1
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeamOnly:
+    get:
+      summary: Get All Teamns Pokemon
+      tags:
+      - PokeTeam Only
+      operationId: GetAllTeamnsPokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    post:
+      summary: Post Team Pokemon
+      tags:
+      - PokeTeam Only
+      operationId: PostTeamPokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/PostTeamPokemonRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeamOnly/2:
+    get:
+      summary: Get Team Pokemon by Id
+      tags:
+      - PokeTeam Only
+      operationId: GetTeamPokemonbyId
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+    delete:
+      summary: Delete Only Team Pokemon
+      tags:
+      - PokeTeam Only
+      operationId: DeleteOnlyTeamPokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeamOnly/5:
+    put:
+      summary: Modify PokeTeam OPnly Pokemon
+      tags:
+      - PokeTeam Only
+      operationId: ModifyPokeTeamOPnlyPokemon
+      deprecated: false
+      produces:
+      - application/json
+      parameters:
+      - name: Body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/ModifyPokeTeamOPnlyPokemonRequest'
+      responses:
+        '200':
+          description: ''
+          headers: {}
+  /PokeTeamOnly/3:
+    delete:
+      summary: Delete Only Team Pokemon1
+      tags:
+      - PokeTeam Only
+      operationId: DeleteOnlyTeamPokemon1
+      deprecated: false
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          headers: {}
+definitions:
+  PostPokemonRequest:
+    title: PostPokemonRequest
+    example:
+      name: Charizard
+      growth_time: 10
+      max_harvest: 20
+      natural: Fire
+      preEvolution: Charmander
+      evolution: ''
+      natural_gift_power: 30
+      size: 10
+      smoothness: 220
+      soil_dryness: 20
+      potency: 10
+    type: object
+    properties:
+      name:
+        type: string
+      growth_time:
+        type: integer
+        format: int32
+      max_harvest:
+        type: integer
+        format: int32
+      natural:
+        type: string
+      preEvolution:
+        type: string
+      evolution:
+        type: string
+      natural_gift_power:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      smoothness:
+        type: integer
+        format: int32
+      soil_dryness:
+        type: integer
+        format: int32
+      potency:
+        type: integer
+        format: int32
+    required:
+    - name
+    - growth_time
+    - max_harvest
+    - natural
+    - preEvolution
+    - evolution
+    - natural_gift_power
+    - size
+    - smoothness
+    - soil_dryness
+    - potency
+  ModfyPokemonRequest:
+    title: ModfyPokemonRequest
+    example:
+      id: 1
+      name: Ditto
+      growth_time: 10
+      max_harvest: 20
+      natural: ''
+      preEvolution: ''
+      evolution: ''
+      natural_gift_power: 30
+      size: 10
+      smoothness: 220
+      soil_dryness: 20
+      potency: 10
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      name:
+        type: string
+      growth_time:
+        type: integer
+        format: int32
+      max_harvest:
+        type: integer
+        format: int32
+      natural:
+        type: string
+      preEvolution:
+        type: string
+      evolution:
+        type: string
+      natural_gift_power:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      smoothness:
+        type: integer
+        format: int32
+      soil_dryness:
+        type: integer
+        format: int32
+      potency:
+        type: integer
+        format: int32
+    required:
+    - id
+    - name
+    - growth_time
+    - max_harvest
+    - natural
+    - preEvolution
+    - evolution
+    - natural_gift_power
+    - size
+    - smoothness
+    - soil_dryness
+    - potency
+  PostTrainningRequest:
+    title: PostTrainningRequest
+    example:
+      name: Mario
+      age: 12
+      origin_city: Pueblo Paletas
+      gender: M
+      region_name: Este
+      is_training: true
+      pokemon:
+      - 1
+    type: object
+    properties:
+      name:
+        type: string
+      age:
+        type: number
+        format: double
+      origin_city:
+        type: string
+      gender:
+        type: string
+      region_name:
+        type: string
+      is_training:
+        type: boolean
+      pokemon:
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - name
+    - age
+    - origin_city
+    - gender
+    - region_name
+    - is_training
+    - pokemon
+  ModifyPokemonTrainningRequest:
+    title: ModifyPokemonTrainningRequest
+    example:
+      id: 3
+      name: Mario
+      age: 12
+      origin_city: Pueblo Paletas
+      gender: M
+      region_name: Este
+      is_training: true
+      pokemon:
+      - 1
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      name:
+        type: string
+      age:
+        type: number
+        format: double
+      origin_city:
+        type: string
+      gender:
+        type: string
+      region_name:
+        type: string
+      is_training:
+        type: boolean
+      pokemon:
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - id
+    - name
+    - age
+    - origin_city
+    - gender
+    - region_name
+    - is_training
+    - pokemon
+  PostTeamRequest:
+    title: PostTeamRequest
+    example:
+      id: 1
+      name: Team 2
+      origin_city: Oeste
+      region_name: Oeste
+      number_wins: 1
+      pokemonTrainer:
+      - 1
+      - 3
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      name:
+        type: string
+      origin_city:
+        type: string
+      region_name:
+        type: string
+      number_wins:
+        type: integer
+        format: int32
+      pokemonTrainer:
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - id
+    - name
+    - origin_city
+    - region_name
+    - number_wins
+    - pokemonTrainer
+  ModifyPokemonTeamRequest:
+    title: ModifyPokemonTeamRequest
+    example:
+      id: 1
+      name: Team 1
+      origin_city: Oeste
+      region_name: Oeste
+      number_wins: 1
+      pokemonTrainer:
+      - 1
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      name:
+        type: string
+      origin_city:
+        type: string
+      region_name:
+        type: string
+      number_wins:
+        type: integer
+        format: int32
+      pokemonTrainer:
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - id
+    - name
+    - origin_city
+    - region_name
+    - number_wins
+    - pokemonTrainer
+  PostTeamPokemonRequest:
+    title: PostTeamPokemonRequest
+    example:
+      name: Team 21
+      origin_city: Oeste
+      region_name: Oeste
+      number_wins: 10
+      onlyPokemon: true
+      pokemon:
+      - 1
+    type: object
+    properties:
+      name:
+        type: string
+      origin_city:
+        type: string
+      region_name:
+        type: string
+      number_wins:
+        type: integer
+        format: int32
+      onlyPokemon:
+        type: boolean
+      pokemon:
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - name
+    - origin_city
+    - region_name
+    - number_wins
+    - onlyPokemon
+    - pokemon
+  ModifyPokeTeamOPnlyPokemonRequest:
+    title: ModifyPokeTeamOPnlyPokemonRequest
+    example:
+      id: 4
+      nameTeam: ''
+      onlyPokemon: true
+      pokemon:
+      - 1
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      nameTeam:
+        type: string
+      onlyPokemon:
+        type: boolean
+      pokemon:
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - id
+    - nameTeam
+    - onlyPokemon
+    - pokemon
+  ModfyPokemonRequest1:
+    title: ModfyPokemonRequest1
+    example:
+      name: Charizard
+      growth_time: 10
+      max_harvest: 20
+      natural: Fire
+      preEvolution: Charmander
+      evolution: ''
+      natural_gift_power: 30
+      size: 10
+      smoothness: 220
+      soil_dryness: 20
+      potency: 10
+    type: object
+    properties:
+      name:
+        type: string
+      growth_time:
+        type: integer
+        format: int32
+      max_harvest:
+        type: integer
+        format: int32
+      natural:
+        type: string
+      preEvolution:
+        type: string
+      evolution:
+        type: string
+      natural_gift_power:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      smoothness:
+        type: integer
+        format: int32
+      soil_dryness:
+        type: integer
+        format: int32
+      potency:
+        type: integer
+        format: int32
+    required:
+    - name
+    - growth_time
+    - max_harvest
+    - natural
+    - preEvolution
+    - evolution
+    - natural_gift_power
+    - size
+    - smoothness
+    - soil_dryness
+    - potency
+  ModifyPokeTeamOPnlyPokemonsRequest:
+    title: ModifyPokeTeamOPnlyPokemonsRequest
+    example:
+      id: 4
+      nameTeam: ''
+      onlyPokemon: true
+      pokemon:
+      - 1
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int32
+      nameTeam:
+        type: string
+      onlyPokemon:
+        type: boolean
+      pokemon:
+        type: array
+        items:
+          type: integer
+          format: int32
+    required:
+    - id
+    - nameTeam
+    - onlyPokemon
+    - pokemon
+tags:
+- name: Pokemon
+  description: "# Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemonç\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"name\": \"Charizard\",  \n> \"growth_time\": 10,  \n> \"max_harvest\": 20,  \n> \"natural\": \"Fire\",  \n> \"preEvolution\": \"Charmander\",  \n> \"evolution\": \"\",  \n> \"natural_gift_power\": 30,  \n> \"size\": 10,  \n> \"smoothness\": 220,  \n> \"soil_dryness\": 20,  \n> \"potency\": 10  \n> }"
+- name: Pokemon Trainning
+  description: "# Entrenador Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los entrenadores Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Enrtrenador Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 1,  \n> \"name\": \"Pepe\",  \n> \"age\": 12.0,  \n> \"origin_city\": \"Pueblo Paleta\",  \n> \"gender\": \"M\",  \n> \"region_name\": \"Oeste\",  \n> \"is_training\": true,  \n> \"pokemon\": \\[  \n> 1  \n> \\]  \n> }"
+- name: Pokemon Team
+  description: "# Equipo Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 1,  \n> \"name\": \"Team 1\",  \n> \"origin_city\": \"Oeste\",  \n> \"region_name\": \"Oeste\",  \n> \"number_wins\": 1,  \n> \"pokemonTrainer\": \\[  \n> 1  \n> \\]  \n> }"
+- name: PokeTeam Only
+  description: "# Equipo Pokemon (Solo pokemons)\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 4,  \n> \"nameTeam\": \"\",  \n> \"onlyPokemon\": true,  \n> \"pokemon\": \\[  \n> 1  \n> \\]  \n> }"

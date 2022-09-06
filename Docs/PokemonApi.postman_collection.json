@@ -1,0 +1,1120 @@
+{
+	"info": {
+		"_postman_id": "919c0786-2970-43d7-857a-72f90bb23098",
+		"name": "PokemonApi",
+		"description": "# Pokemon API Collection\n\nColección diseñada para hacer más fácil las pruebas para la *API de Pokemon.* La cual está dividida en 2 carpetas principales:\n\n*   Local: Puedes probar ésta carpeta si corres el proyecto en tu **archivo local (http://127.0.0.1:8000/)**\n    \n\n*   Final Heroku: Puedes probar ésta carpeta desde cualquier cliente, ya que se encuentra s**ubida a un servidor (https://code-excersice.herokuapp.com)**\n    \n\nAmbas carpetas contienen una estructura de carpetas similar:\n\n*   Pokemon: Aquí encontrarás la información de los *pokemons registrados*\n*   Pokemon Trainning: Aquí encontrarás la información de los *entrenadores pokemon's*\n*   Pokemon Team: Equipos pokemon *liderados por su entrenador*\n*   Pokemon Team Only: Equipos pokemon donde sólo hay *pokemons en grupo*",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17481279"
+	},
+	"item": [
+		{
+			"name": "Local",
+			"item": [
+				{
+					"name": "Pokemon",
+					"item": [
+						{
+							"name": "Get All Pokemon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/Pokemon",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"Pokemon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Pokemon by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/Pokemon/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"Pokemon",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Pokemon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Charizard\",\n  \"growth_time\": 10,\n  \"max_harvest\": 20,\n  \"natural\": \"Fire\",\n  \"preEvolution\": \"Charmander\",\n  \"evolution\": \"\",\n  \"natural_gift_power\": 30,\n  \"size\": 10,\n  \"smoothness\": 220,\n  \"soil_dryness\": 20,\n  \"potency\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/Pokemon",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"Pokemon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Pokemon",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/Pokemon/4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"Pokemon",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modfy Pokemon",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"Ditto\",\n    \"growth_time\": 10,\n    \"max_harvest\": 20,\n    \"natural\": \"\",\n    \"preEvolution\": \"\",\n    \"evolution\": \"\",\n    \"natural_gift_power\": 30,\n    \"size\": 10,\n    \"smoothness\": 220,\n    \"soil_dryness\": 20,\n    \"potency\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/v1/Pokemon/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"Pokemon",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemonç\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"name\": \"Charizard\",  \n> \"growth_time\": 10,  \n> \"max_harvest\": 20,  \n> \"natural\": \"Fire\",  \n> \"preEvolution\": \"Charmander\",  \n> \"evolution\": \"\",  \n> \"natural_gift_power\": 30,  \n> \"size\": 10,  \n> \"smoothness\": 220,  \n> \"soil_dryness\": 20,  \n> \"potency\": 10  \n> }"
+				},
+				{
+					"name": "Pokemon Trainning",
+					"item": [
+						{
+							"name": "Get All Trainning",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTraining",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTraining"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trainning by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTraining/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTraining",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Trainning",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Mario\",\n  \"age\": 12.0,\n  \"origin_city\": \"Pueblo Paletas\",\n  \"gender\": \"M\",\n  \"region_name\": \"Este\",\n  \"is_training\": true,\n  \"pokemon\": [\n    1\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTraining",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTraining"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Pokemon Trainning",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 3,\n    \"name\": \"Mario\",\n    \"age\": 12.0,\n    \"origin_city\": \"Pueblo Paletas\",\n    \"gender\": \"M\",\n    \"region_name\": \"Este\",\n    \"is_training\": true,\n    \"pokemon\": [\n        1\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/v1/PokeTraining/3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTraining",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Trainning",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTraining/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTraining",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Entrenador Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los entrenadores Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Enrtrenador Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 1,  \n> \"name\": \"Pepe\",  \n> \"age\": 12.0,  \n> \"origin_city\": \"Pueblo Paleta\",  \n> \"gender\": \"M\",  \n> \"region_name\": \"Oeste\",  \n> \"is_training\": true,  \n> \"pokemon\": \\[  \n> 1  \n> \\]  \n> }"
+				},
+				{
+					"name": "Pokemon Team",
+					"item": [
+						{
+							"name": "Get All Teams",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeam",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeam"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Team by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeam/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeam",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Team",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"name\": \"Team 2\",\n  \"origin_city\": \"Oeste\",\n  \"region_name\": \"Oeste\",\n  \"number_wins\": 1,\n  \"pokemonTrainer\": [\n    1,\n    3\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeam",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeam"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Pokemon Team",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"Team 1\",\n    \"origin_city\": \"Oeste\",\n    \"region_name\": \"Oeste\",\n    \"number_wins\": 1,\n    \"pokemonTrainer\": [\n        1\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/v1/PokeTeam/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeam",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Team",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeam/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeam",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Equipo Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 1,  \n> \"name\": \"Team 1\",  \n> \"origin_city\": \"Oeste\",  \n> \"region_name\": \"Oeste\",  \n> \"number_wins\": 1,  \n> \"pokemonTrainer\": \\[  \n> 1  \n> \\]  \n> }"
+				},
+				{
+					"name": "PokeTeam Only",
+					"item": [
+						{
+							"name": "Get All Teamns Pokemon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeamOnly",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeamOnly"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Team Pokemon by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeamOnly/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeamOnly",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Team Pokemon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Team 21\",\n  \"origin_city\": \"Oeste\",\n  \"region_name\": \"Oeste\",\n  \"number_wins\": 10,\n  \"onlyPokemon\": true, \n  \"pokemon\": [\n    1\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeamOnly",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeamOnly"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify PokeTeam OPnly Pokemon",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 4,\n    \"nameTeam\": \"\",\n    \"onlyPokemon\": true,\n    \"pokemon\": [\n        1\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/v1/PokeTeamOnly/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeamOnly",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Only Team Pokemon",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeamOnly/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeamOnly",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Equipo Pokemon (Solo pokemons)\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 4,  \n> \"nameTeam\": \"\",  \n> \"onlyPokemon\": true,  \n> \"pokemon\": \\[  \n> 1  \n> \\]  \n> }"
+				}
+			]
+		},
+		{
+			"name": "Final Heroku",
+			"item": [
+				{
+					"name": "Pokemon",
+					"item": [
+						{
+							"name": "Get All Pokemon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/Pokemon",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"Pokemon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Pokemon by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/Pokemon/1",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"Pokemon",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Pokemon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Charizard\",\n  \"growth_time\": 10,\n  \"max_harvest\": 20,\n  \"natural\": \"Fire\",\n  \"preEvolution\": \"Charmander\",\n  \"evolution\": \"\",\n  \"natural_gift_power\": 30,\n  \"size\": 10,\n  \"smoothness\": 220,\n  \"soil_dryness\": 20,\n  \"potency\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/Pokemon",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"Pokemon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Pokemon",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/Pokemon/7",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"Pokemon",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modfy Pokemon",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Charizard\",\n    \"growth_time\": 10,\n    \"max_harvest\": 20,\n    \"natural\": \"Fire\",\n    \"preEvolution\": \"Charmander\",\n    \"evolution\": \"\",\n    \"natural_gift_power\": 30,\n    \"size\": 10,\n    \"smoothness\": 220,\n    \"soil_dryness\": 20,\n    \"potency\": 10\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/Pokemon/6",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"Pokemon",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemonç\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"name\": \"Charizard\",  \n> \"growth_time\": 10,  \n> \"max_harvest\": 20,  \n> \"natural\": \"Fire\",  \n> \"preEvolution\": \"Charmander\",  \n> \"evolution\": \"\",  \n> \"natural_gift_power\": 30,  \n> \"size\": 10,  \n> \"smoothness\": 220,  \n> \"soil_dryness\": 20,  \n> \"potency\": 10  \n> }"
+				},
+				{
+					"name": "Pokemon Trainning",
+					"item": [
+						{
+							"name": "Get All Trainning",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTraining",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTraining"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trainning by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTraining/1",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTraining",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Trainning",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Mario Hugo\",\n  \"age\": 12.0,\n  \"origin_city\": \"Pueblo Paletas\",\n  \"gender\": \"M\",\n  \"region_name\": \"Este\",\n  \"is_training\": true,\n  \"pokemon\": [\n    1\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTraining",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTraining"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Trainning",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTraining/5",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTraining",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Pokemon Trainning",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 3,\n    \"name\": \"Mario\",\n    \"age\": 12.0,\n    \"origin_city\": \"Pueblo Paletas\",\n    \"gender\": \"M\",\n    \"region_name\": \"Este\",\n    \"is_training\": true,\n    \"pokemon\": [\n        1\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTraining/3",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTraining",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Entrenador Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los entrenadores Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Enrtrenador Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 1,  \n> \"name\": \"Pepe\",  \n> \"age\": 12.0,  \n> \"origin_city\": \"Pueblo Paleta\",  \n> \"gender\": \"M\",  \n> \"region_name\": \"Oeste\",  \n> \"is_training\": true,  \n> \"pokemon\": \\[  \n> 1  \n> \\]  \n> }"
+				},
+				{
+					"name": "Pokemon Team",
+					"item": [
+						{
+							"name": "Get All Teams",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeam",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeam"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Team by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeam/1",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeam",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Team",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 1,\n  \"name\": \"Team 2\",\n  \"origin_city\": \"Oeste\",\n  \"region_name\": \"Oeste\",\n  \"number_wins\": 1,\n  \"pokemonTrainer\": [\n    1,\n    3\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeam",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeam"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Team",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeam/3",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeam",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify Pokemon Team",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"Team 1\",\n    \"origin_city\": \"Oeste\",\n    \"region_name\": \"Oeste\",\n    \"number_wins\": 1,\n    \"pokemonTrainer\": [\n        1\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeam/5",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeam",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Equipo Pokemon\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 1,  \n> \"name\": \"Team 1\",  \n> \"origin_city\": \"Oeste\",  \n> \"region_name\": \"Oeste\",  \n> \"number_wins\": 1,  \n> \"pokemonTrainer\": \\[  \n> 1  \n> \\]  \n> }"
+				},
+				{
+					"name": "PokeTeam Only",
+					"item": [
+						{
+							"name": "Get All Teamns Pokemon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeamOnly",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeamOnly"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Team Pokemon by Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000:8000/v1/PokeTeamOnly/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1:8000"
+									],
+									"port": "8000",
+									"path": [
+										"v1",
+										"PokeTeamOnly",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post Team Pokemon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Team 21\",\n  \"origin_city\": \"Oeste\",\n  \"region_name\": \"Oeste\",\n  \"number_wins\": 10,\n  \"onlyPokemon\": true, \n  \"pokemon\": [\n    1\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeamOnly",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeamOnly"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Only Team Pokemon",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeamOnly/3",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeamOnly",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modify PokeTeam OPnly Pokemons",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 4,\n    \"nameTeam\": \"\",\n    \"onlyPokemon\": true,\n    \"pokemon\": [\n        1\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://code-excersice.herokuapp.com/v1/PokeTeamOnly/5",
+									"protocol": "https",
+									"host": [
+										"code-excersice",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"v1",
+										"PokeTeamOnly",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "# Equipo Pokemon (Solo pokemons)\n\nObtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons\n\n*   GET ALL: Obtener todos los registros\n*   GET BY ID: Obtener un registro por su ID\n*   POST: Publica run nuevo registro de Pokemon\n*   DELETE: Eliminar un registro\n*   PUT: Modificar la información\n    \n\nEstructura del Body json\n\n> {  \n> \"id\": 4,  \n> \"nameTeam\": \"\",  \n> \"onlyPokemon\": true,  \n> \"pokemon\": \\[  \n> 1  \n> \\]  \n> }"
+				}
+			],
+			"description": "# Server Heroku\n\nLa api se encuentra subida a un servidor Gratuito *heroku* con una BD de tipo *postgress.*\n\nEl servidor no debe presentar ninguna falla, si la presenta; mandar correo a *galigaribaldi0@gmail.com*\n\nLas rutas se especifican en las carpetas siguientes"
+		}
+	]
+}
