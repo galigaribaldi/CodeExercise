@@ -2,6 +2,8 @@ from django.db import models
 from model_utils.models import TimeStampedModel, SoftDeletableModel
 
 class Pokemon(TimeStampedModel, SoftDeletableModel):
+    """Class Pokemon to create a New Database Table in DB called Pokemon
+    """
     id                  = models.AutoField(primary_key=True)
     name                = models.CharField(max_length=50, blank=True)
     growth_time         = models.IntegerField(blank=True)
@@ -20,6 +22,9 @@ class Pokemon(TimeStampedModel, SoftDeletableModel):
         return self.name
 
 class PokemonTrainer(TimeStampedModel, SoftDeletableModel):
+    """Class Pokemon Trainer to create a New Database Table in DB called Pokemon Trainner
+    This class have reference to other table called Pokemon (you need to create first one Pokemon)
+    """
     id                  = models.AutoField(primary_key=True)
     name                = models.CharField(max_length=50, blank=True)
     age                 = models.FloatField(blank=True)
@@ -32,6 +37,9 @@ class PokemonTrainer(TimeStampedModel, SoftDeletableModel):
         return self.name
 
 class PokemonTeam(TimeStampedModel, SoftDeletableModel):
+    """Class Pokemon Team to create a New Database Table in DB called Pokemon Team
+    This class have reference to other table called PokemonTrainer (you need to create first one Pokemon Trainner)
+    """    
     id                  = models.AutoField(primary_key=True)
     name                = models.CharField(max_length=50, blank=True)
     origin_city         = models.CharField(max_length=100, blank=True)
@@ -42,6 +50,9 @@ class PokemonTeam(TimeStampedModel, SoftDeletableModel):
         return self.name
 
 class PokemonTeamOnly(TimeStampedModel, SoftDeletableModel):
+    """Class Pokemon Team Only to create a New Database Table in DB called Pokemon Team
+    This class have reference to other table called Pokemon (you need to create first one Pokemon)
+    """        
     id                  = models.AutoField(primary_key=True)
     nameTeam            = models.CharField(max_length=50, blank=True)
     onlyPokemon         = models.BooleanField()

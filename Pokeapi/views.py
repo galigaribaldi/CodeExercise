@@ -7,6 +7,9 @@ from django.http import Http404
 import logging
 
 class Pokemon_APIView(APIView):
+    """Class Pokemon to recive different web Methods (GET - POST - DELETE - PUT)
+    If you don't have a id - Primarykey in Get method, you activate *Get ALL*
+    """
     def get(self, request, pk=None):
         if pk is None:
             pokemon = Pokemon.objects.all()
@@ -42,7 +45,9 @@ class Pokemon_APIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
 class PokemonTrainer_APIView(APIView):
-    
+    """Class Pokemon Trainer to recive different web Methods (GET - POST - DELETE - PUT)
+    If you don't have a id - Primarykey in Get method, you activate *Get ALL*
+    """
     def get(self, request, pk=None):
         if pk is None:
             pokemonTrainer = PokemonTrainer.objects.all()
@@ -79,7 +84,9 @@ class PokemonTrainer_APIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class PokemonTeam_APIView(APIView):
-    
+    """Class Pokemon Team to recive different web Methods (GET - POST - DELETE - PUT)
+    If you don't have a id - Primarykey in Get method, you activate *Get ALL*
+    """    
     def get(self, request, pk=None):
         if pk is None:
             pokemonTeam = PokemonTeam.objects.all()
@@ -118,7 +125,9 @@ class PokemonTeam_APIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class PokemonTeamOnly_APIView(APIView):
-    
+    """Class Pokemon Team Only to recive different web Methods (GET - POST - DELETE - PUT)
+    If you don't have a id - Primarykey in Get method, you activate *Get ALL*
+    """
     def get(self, request, pk=None):
         if pk is None:
             pokemonTeamOnly = PokemonTeamOnly.objects.all()
