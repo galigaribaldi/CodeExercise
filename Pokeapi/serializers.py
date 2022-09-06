@@ -5,7 +5,7 @@ from Pokeapi.models import Pokemon, PokemonTrainer, PokemonTeam, PokemonTeamOnly
 class PokeSerializers(serializers.ModelSerializer):
     class Meta:
         model = Pokemon
-        fields = ['id', 'name', 'growth_time', 'max_harvest', 'natural_gift_power', 'size', 'smoothness', 'soil_dryness', 'potency']
+        fields = ['id', 'name', 'growth_time', 'max_harvest', 'natural', 'preEvolution', 'evolution','natural','natural_gift_power', 'size', 'smoothness', 'soil_dryness', 'potency']
 
 class PokeTrainerSerializers(serializers.ModelSerializer):
     class Meta:
