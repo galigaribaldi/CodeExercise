@@ -18,6 +18,28 @@ python3 manage.py runserver
 
 Nos desplegará una señal de aviso en nuestra consola, diciendonos que ya está ejecutándose nuestro proyecto.
 
+## Descripción del Repositorio
+
+El repositorio tiene una estructura de carpetas y archvios que se describen a continuación:
+
+1. **Docs:** Dentro de ésta carpetra se encuentran dos documentaciones
+    * PokemonApi-SwaggerYaml.yaml: Documetnación de tipo *swagger* en la cual se describe el uso de las rutas
+    * PokemonApi.postman_collection.json: Colección de tipo *postman* para probar cada una de las rutas
+2. **Pokeapi:** Carpeta de proyecto en Django. La cual contiene los archivos de rutas, vistas y modelos para su uso
+    * admin.py: Configuración inicial para agregar modelos desde la pantalla de admin
+    * models.py: Modelos de abstracción para crear las entidades en BD
+    * serializers.py: Serializadores para mandar los datos vía *json*
+    * views.py: Vistas que contienen los métodos *get*, *put*, *post*, *delete*
+3. **RestApiProject:**
+    * urls.py: Archivo dónde se definen las rutas del proyecto
+    * settings.py: Archivo de configuraciones. **NOTA: Si se mueve las configuraciones en la rama *main* puede que no se suba correctamente al servidor en *Heroku***
+4. **static - staticfiles:** Carpeta que contiene archvios estáticos para subir al server.
+5. **Archivos principales:**
+    * manage.py: Archivo principal para correr la aplicación en *DJANGO*
+    * PROCFILE: Archvio de comando para correr el server en *Heroku*
+    * requirements.txt: Especificaciones de librerías en *python*
+    * runtime.txt: Versión específica que se usa para éste repositorio
+
 ## Descripción de la API
 
 La API simula una pequeña BD sobre 4 elementos **Pokemon, Entrenadores Pokemon, Equipos Pokemon (Entrenadores), Equipos Pokemon (Sólo pokemons)**
