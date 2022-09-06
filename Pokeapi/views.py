@@ -111,7 +111,7 @@ class PokemonTeam_APIView(APIView):
         
     def put(self, request, pk):
         pokemonTeam = PokemonTeam.objects.get(pk=pk)
-        serializer = PokemonTeam(pokemonTeam, data = request.data)
+        serializer = PokeTeamSerializer(pokemonTeam, data = request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
