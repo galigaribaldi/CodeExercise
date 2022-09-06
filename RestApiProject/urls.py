@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path
 from Pokeapi.views import *
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -16,4 +18,4 @@ urlpatterns = [
     
     path('v1/PokeTeamOnly/<int:pk>', PokemonTeamOnly_APIView.as_view()),
     path('v1/PokeTeamOnly', PokemonTeamOnly_APIView.as_view()),    
-]
+] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

@@ -1,0 +1,1 @@
+web: guinicorn RestApiProject.wsgi --log-file -
