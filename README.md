@@ -22,6 +22,8 @@ Nos desplegará una señal de aviso en nuestra consola, diciendonos que ya está
 
 La API simula una pequeña BD sobre 4 elementos **Pokemon, Entrenadores Pokemon, Equipos Pokemon (Entrenadores), Equipos Pokemon (Sólo pokemons)**
 
+
+
 ### Uso de la API en Local
 
 **Importante: Para poder hacer uso de ésta sección, el código debe estarse ejecutando de manera correcta en la máquina local**. De la misma forma, se debe revisar en que puerto - liga se está ejecutando el código; por lo regular se ejecuta en *localhost*, pero se recomienda checar. La descripción de las ligas (locales - **http://127.0.0.1:8000/**) se muestran a continuación
@@ -39,20 +41,20 @@ La API simula una pequeña BD sobre 4 elementos **Pokemon, Entrenadores Pokemon,
 Obtener - Crear - Eliminar - Modificar la información relacionada con los pokemons
 
 - **GET ALL**: Obtener todos los registros
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/Pokemon
+  - Heroku: https://code-excersice.herokuapp.com/v1/Pokemon
 - **GET BY ID**: Obtener un registro por su ID
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/Pokemon/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/Pokemon/{id}
 - **POST**: Publica run nuevo registro de Pokemon
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/Pokemon
+  - Heroku: https://code-excersice.herokuapp.com/v1/Pokemon
 - **DELETE**: Eliminar un registro
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/Pokemon/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/Pokemon/{id}
 - **PUT**: Modificar la información
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000/v1/Pokemon/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/Pokemon/{id}
 
 Estructura del Body json
 
@@ -79,20 +81,20 @@ Estructura del Body json
 Obtener - Crear - Eliminar - Modificar la información relacionada con los entrenadores Pokemons
 
 - **GET ALL**: Obtener todos los registros
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTraining
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTraining
 - **GET BY ID**: Obtener un registro por su ID
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTraining/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTraining/{id}
 - **POST**: Publica run nuevo registro de Enrtrenador Pokemon
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTraining
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTraining
 - **DELETE**: Eliminar un registro
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTraining/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTraining/{id}
 - **PUT**: Modificar la información
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000/v1/PokeTraining/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTraining/{id}
 
 Estructura del Body json
 
@@ -118,20 +120,20 @@ Estructura del Body json
 Obtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons
 
 - **GET ALL**: Obtener todos los registros
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeam
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeam
 - **GET BY ID**: Obtener un registro por su ID
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeam/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeam/{id}
 - **POST**: Publica run nuevo registro de Pokemon
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeam
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeam
 - **DELETE**: Eliminar un registro
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeam/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeam/{id}
 - **PUT**: Modificar la información
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000/v1/PokeTeam/{if}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeam/{id}
 
 Estructura del Body json
 
@@ -155,20 +157,20 @@ Estructura del Body json
 Obtener - Crear - Eliminar - Modificar la información relacionada con los equipos Pokemons
 
 - **GET ALL**: Obtener todos los registros
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeamOnly
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeamOnly
 - **GET BY ID**: Obtener un registro por su ID
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeamOnly/{id}
+  - Heroku:  https://code-excersice.herokuapp.com/v1/PokeTeamOnly/{id}
 - **POST**: Publica run nuevo registro de Pokemon
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeamOnly
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeamOnly
 - **DELETE**: Eliminar un registro
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000:8000/v1/PokeTeamOnly/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeamOnly/{id}
 - **PUT**: Modificar la información
-  - Local
-  - Heroku
+  - Local: http://127.0.0.1:8000/v1/PokeTeamOnly/{id}
+  - Heroku: https://code-excersice.herokuapp.com/v1/PokeTeamOnly/{id}
 
 Estructura del Body json
 
